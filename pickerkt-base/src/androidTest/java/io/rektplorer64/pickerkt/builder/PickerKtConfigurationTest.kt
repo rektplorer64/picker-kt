@@ -48,8 +48,8 @@ class PickerKtConfigurationTest {
                 add { MimeType.MsWordDoc2007 }
             }
             selection {
-                maxSelection { 10 }
-                minSelection { 8 }
+                maxSelection(10)
+                minSelection(8)
             }
             orderBy {
                 add { Ordering(column = ContentResolverColumn.CollectionId, order = Order.Ascending) }
