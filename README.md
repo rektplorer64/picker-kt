@@ -1,7 +1,7 @@
 
 <div align="center">
 
-<img width="128" height="128" src="./sample/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" alt="logo">
+<img width="128" height="128" src="./repo_metadata/logo.webp" alt="logo">
 
 <span>
 
@@ -14,15 +14,13 @@
 <p>A media picker library for Android apps powered by Jetpack Compose.</p>
 </div>
 
-![Project Hero Image](/previews/pj_hero_img.png)
+![Project Hero Image](./repo_metadata/hero_image.png)
 
 ## 🚩 Motivations
----
 The app I worked on in my full-time job used [Matisse](https://github.com/zhihu/Matisse), and it was okay until a new version of Android (11 ~ 12) came along. The app faced instability issues and, to be honest, the UI of Matisse is not consistent with the rest of the app that uses Jetpack Compose by that time. Therefore, I spent my free time building this library to (hopefully) replace Matisse.
 
 
 ## 🎀 Project Structure
----
 PickerKT has 3 sub-modules as follows:
 
 ### `pickerkt-base`
@@ -57,15 +55,21 @@ The sample is basically a demo of the library. You can build and install to test
 
 
 ## 🔐 Required Runtime Permissions
----
 The library requires `android.Manifest.permission.READ_EXTERNAL_STORAGE` permission to operate. `pickerkt-ui` will not perform any permission request for you, so you have to do it yourself.
 
 
 ## ⭐ Quick Start with PickerKT UI
----
 
 ### Download
-// TODO:
+```groovy
+repositories {
+   maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+   implementation 'com.github.rektplorer64:picker-kt:<VERSION>'
+}
+```
 
 ### With Jetpack Compose
 0. Request `android.Manifest.permission.READ_EXTERNAL_STORAGE` permission from the user. If you got no idea, see the `sample` source code or `Google` it.
@@ -110,12 +114,10 @@ The library requires `android.Manifest.permission.READ_EXTERNAL_STORAGE` permiss
 That's all you have to do for Jetpack Compose. To use the result list, use `myPickerResultList` as declared in step 1.
 
 ## ✅ Requirements
----
 - AndroidX
 - Min SDK: 24
 
 ## 📃 License
----
     Copyright 2022 PickerKT Contributors.
 
     Licensed under the Apache License, Version 2.0 (the "License");
