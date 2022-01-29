@@ -6,6 +6,8 @@ plugins {
     id 'kotlin-parcelize'
 
     id 'org.jetbrains.kotlin.plugin.serialization' version '1.6.10'
+
+    id 'maven-publish'
 }
 
 android {
@@ -43,6 +45,20 @@ android {
     packagingOptions {
         resources {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                groupId = 'com.github.rektplorer64'
+                artifactId = 'pickerkt-base'
+                version = '0.1.0'
+            }
         }
     }
 }
