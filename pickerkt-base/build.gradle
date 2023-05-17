@@ -51,8 +51,8 @@ android {
 publishing {
     publications {
         release(MavenPublication) {
-            groupId = "com.github.rektplorer64"
-            artifactId = "pickerkt-base"
+            groupId = "com.github.rektplorer64.picker-kt"
+            artifactId = "base"
             version = "0.1.0"
         }
     }
